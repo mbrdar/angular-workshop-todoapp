@@ -3,7 +3,6 @@ Todos:
   <input type="text" [(ngModel)]="term"
          placeholder="search" class="form-control">
 </div>
-{{term}}
 <div class="panel panel-primary" *ngFor="let todo of todos | filter:term">
   <div class="panel-heading">
     <h3 class="panel-title">{{todo.title}}</h3>

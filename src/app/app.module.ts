@@ -4,10 +4,10 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
 import {AddTodoComponent} from './add-todo/add-todo.component';
-import {TodoService} from "./service/todo.service";
+import {TodoService} from './service/todo.service';
 import {TodosComponent} from './todos/todos.component';
 import {FilterPipe} from './pipe/filter.pipe';
-import {HttpModule} from "@angular/http";
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [

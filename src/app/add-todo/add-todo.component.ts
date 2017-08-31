@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {TodoService} from "../service/todo.service";
-import {Todo} from "../model/todo.model";
+import {TodoService} from '../service/todo.service';
+import {Todo} from '../model/todo.model';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-add-todo',
@@ -9,15 +10,13 @@ import {Todo} from "../model/todo.model";
 })
 export class AddTodoComponent implements OnInit {
 
-  testvar = 'test123';
-
   constructor(private todoService: TodoService) {
   }
 
   ngOnInit() {
   }
 
-  submit(f) {
+  submit(f: NgForm) {
     if (f.valid) {
       this.todoService.add(new Todo({
         title: f.controls.title.value,

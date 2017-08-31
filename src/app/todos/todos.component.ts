@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {TodoService} from "../service/todo.service";
-import {Todo} from "../model/todo.model";
+import {TodoService} from '../service/todo.service';
+import {Todo} from '../model/todo.model';
 
 @Component({
   selector: 'app-todos',
@@ -18,7 +18,6 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
     this.todoService.get().subscribe((values: Todo[]) => {
-      console.log('success');
       this.todos = values;
     });
   }
